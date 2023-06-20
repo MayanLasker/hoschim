@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>חוסכים! 🤑</title>
+  </head>
+  <link rel="stylesheet" href="calculator.css" />
+
+  <body>
+    <div class="containers">
+      <button id="refresh">חשב מחדש</button>
+
+      <img src="pic.png" alt="" id="picture" />
+      <img src="pic2.png" alt="" id="pic2" />
+      <img src="min.png" alt="" id="min" />
+
+      <div id="name">חוסכים!</div>
+
+      <div id="center">
+        <!-- בחירת יעד -->
+        <div id="select">
+          <div id="label">בחר יעד לחיסכון</div>
+          <select name="goal" id="goal">
+            <option value="">מה היעד שלך?</option>
+            <option value="רישיון נהיגה">רישיון נהיגה</option>
+            <option value="מסע לפולין">מסע לפולין</option>
+            <option value="טיול לחול">טיול לחול</option>
+            <option value="רכב">רכב</option>
+            <option value="ציוד צילום">ציוד צילום</option>
+            <option value="ציוד טיולים">ציוד טיולים</option>
+            <option value="ניתוח לייזר">ניתוח לייזר</option>
+            <option value="תואר">תואר</option>
+            <option value="הסרת שיער">הסרת שיער</option>
+            <option value="כלי נגינה">כלי נגינה</option>
+            <option value="אחר">אחר</option>
+          </select>
+        </div>
+
+        <!-- כל האינפוטים -->
+        <div id="inp">
+          <!-- >עמודה ימנית -->
+          <div id="right" class="fields">
+            <label for="firstdate">תאריך התחלתי</label>
+            <input type="date" id="firstdate" class="options" />
+            <div id="1" class="required">*שדה זה הינו חובה</div>
+            <label for="endgoal">יעד לחסכון</label>
+            <input type="number" id="endgoal" class="options" min="0" />
+            <div id="2" class="required">*שדה זה הינו חובה</div>
+            <label for="moneyperhour">כמה אני מקבל/ת לשעה?</label>
+            <input type="number" id="moneyperhour" class="options" min="0" />
+            <div id="3" class="required">*שדה זה הינו חובה</div>
+          </div>
+          <!-- עמודה שמאלית -->
+          <div id="left" class="fields">
+            <label for="lastdate">תאריך יעד</label>
+            <input type="date" class="options" id="dueDate" min="0" />
+            <div id="4" class="required">*שדה זה הינו חובה</div>
+            <label for="currentmoney">סכום נוכחי </label>
+            <input
+              type="number"
+              class="options"
+              id="currentAmontMoney"
+              min="0"
+            />
+            <div id="5" class="required">*שדה זה הינו חובה</div>
+            <label for="weeklyexpenses">הוצאות שבועיות</label>
+            <input type="number" class="options" id="moneyExpenses" min="0" />
+            <div id="6" class="required">*שדה זה הינו חובה</div>
+          </div>
+        </div>
+
+        <!-- כפתור תוצאות -->
+
+        <img src="res.png" id="btn" />
+      </div>
+
+      <!-- תוצאות -->
+      <div id="results">
+        <span id="loader" class="loader"></span>
+        <div id="hourperweek"></div>
+        <div id="recommendation"></div>
+        <img src="clock.png" alt="" id="clock" />
+        <img src="think.png" alt="" id="think" />
+      </div>
+      <!-- Trigger/Open The Modal -->
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="popup">
+      <div id="text">מהו שכר המינימום לגיל שלי?</div>
+      <div id="flex">
+      <input type="number" class="options" id="age" placeholder="מה גילך?" ><br>
+      <button id="btn1">בדיקה</button>
+  </div>
+      <div id="minwage">תוצאת הבדיקה</div>
+  
+       
+      </div>
+    </div>
+  
+  </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

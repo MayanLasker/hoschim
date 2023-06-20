@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&family=Varela+Round&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, rgba(173,242,183,1) 0%, rgba(69,173,124,1) 100%);
+}
+.containers{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+#name{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 120px;
+    color: white;
+    font-family: 'Rubik Spray Paint', cursive;
+    direction: rtl;
+}
+
+#goal{
+    width: 200px;
+    height: 30px;
+    display: block;
+    direction: rtl;
+    border-radius: 5px;
+    background-color: rgb(249 255 192);
+    font-family: 'Varela Round', sans-serif;
+    border: none;
+}
+
+#btn {
+    width: auto;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;;
+    margin-bottom: auto;
+
+    cursor: pointer
+}
+  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap');
+.options{
+    width: 200px;
+    height: 30px;
+    direction: rtl;
+    background-color: #F9FFC0;
+    border-radius: 5px;
+    border: 1px solid #F9FFC0;
+    font-family: 'Varela Round', sans-serif;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    direction: rtl;
+    font-family: 'Varela Round', sans-serif;
+}
+#inp{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding-top: 10px;
+    font-family: 'Varela Round', sans-serif;
+}
+label{
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-family: 'Varela Round', sans-serif;
+    color: white
+}
+
+.required{
+    padding-bottom: 2px;
+    font-size: 12px;
+    color: red;
+    height: 12px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#select{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+   
+  
+}
+
+#label{
+    padding-bottom: 5px;
+    font-family: 'Varela Round', sans-serif;
+    color: white
+
+}
+
+#center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results{
+    padding-top: 8px;
+}
+
+#hourperweek{
+    margin-left: 100px;
+    background-color: rgb(219, 187, 250);
+    direction: rtl;
+    font-family: 'Varela Round', sans-serif;
+
+    margin-bottom: 9px;
+    padding: 8px;
+    padding-inline: 34px;
+    border-radius: 10px;
+    width: 18em; /* the element needs a fixed width (in px, em, %, etc) */
+    overflow-wrap: break-word;
+
+}
+
+#recommendation{
+    margin-right: 20px;
+
+    background-color: #cee0ff;
+    direction: rtl;
+
+    font-family: 'Varela Round', sans-serif;
+
+    padding: 8px;
+    border-radius: 10px;
+    padding-inline: 34px;
+    width: 21em; /* the element needs a fixed width (in px, em, %, etc) */
+    overflow-wrap: break-word;
+
+}
+
+#picture{
+    height: 200px;
+    position: absolute;
+    top: 24%;
+    left: 3%;
+    z-index: -1;
+    transform: rotate(-10deg);
+}
+
+#pic2{
+    transform: rotate(10deg);
+    top: 2%;
+    left: 67%;
+    height: 150px;
+    position: absolute;
+}
+
+#clock{
+    height: 47px;
+    position: absolute;
+    top: 83%;
+    left: 65%;
+    transform: rotate(-15deg);}
+
+#think{
+    height: 43px;
+    position: absolute;
+    top: 91%;
+    left: 31%;
+    transform: rotate(-15deg);}
+
+#min{
+        height: 130px;
+        position: absolute;
+        top: 40%;
+        left: 90%;
+    cursor :pointer;
+}
+
+#refresh{
+    cursor: pointer; 
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    color: #458b65;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-family: 'Varela Round', sans-serif;
+
+  }
+
+
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            border: 3px solid;
+            border-color: #FFF #FFF transparent transparent;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        
+        .loader::after,
+        .loader::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid;
+            border-color: transparent transparent #FF3D00 #FF3D00;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            animation: rotationBack 0.5s linear infinite;
+            transform-origin: center center;
+        }
+        
+        .loader::before {
+            width: 32px;
+            height: 32px;
+            border-color: #FFF #FFF transparent transparent;
+            animation: rotation 1.5s linear infinite;
+        }
+        
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+        
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes rotationBack {
+            0% {
+                transform: rotate(0deg);
+            }
+        
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+        /* The Modal (background) */
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 5px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   
+    
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 21% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 350px; /* Could be more or less, depending on screen size */
+    height: 220px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 11px #F9FFC0;
+    border-radius: 9px;
+  }
+  
+  .modal-body {
+    display: flex;
+    padding: 2px 16px;
+    align-items: center;
+  }
+
+#btn1{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border:aquamarine 1px solid ;
+    padding:7px;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-family: 'Varela Round', sans-serif;
+}
+
+  /* The Close Button */
+  .close {
+    color: #1f1e1e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+    
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    
+    ;
+  }
+
+  #text{
+    font-size: 25px;
+    font-family: 'Varela Round', sans-serif;
+    border: none;
+        direction: rtl;
+  
+
+  }
+
+  #popup{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 30px;  }
+
+#flex{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-direction: row-reverse;    }
+
+#minwage{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px
+
+}
